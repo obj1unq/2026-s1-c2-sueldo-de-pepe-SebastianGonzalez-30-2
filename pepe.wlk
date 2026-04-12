@@ -7,14 +7,54 @@ object pepe {
 	var bonoResultado = bonoNulo
 	var cantidadDeFaltas = 0
 	
-	method cantidadDeFaltas() { return cantidadDeFaltas }
+	method cantidadDeFaltas() { 
+		
+		return cantidadDeFaltas 
+		
+	}
 	
-	// faltan los métodos para poder cambiar la categoria, el bono por presentismo,
-	// el bono por resultados y la cantidad de faltas de Pepe. 
+	method setCategoria(unaCategoria) {
+
+		/*Setter que cambia la categoria de Pepe a la dada*/
+
+		categoria = unaCategoria
+
+	}
+
+	method setCantidadDeFaltas(numeroDeFaltas) {
+
+		/*Setter para la cantidad de faltas de Pepe*/
+
+		cantidadDeFaltas = numeroDeFaltas
+
+	}
+
+	method setBonoResultado(unBono) {
+		
+		/*Setter para el bono por resultados de pepe*/
+		
+		bonoResultado = unBono
+
+	}
+
+	method setBonoPresentismo(unBono) {
+
+		/*Setter para el bono por presentismo de Pepe */
+
+		bonoPresentismo = unBono
+
+	}
+
 	
-	method sueldoNeto() { return categoria.neto() }
+	
+	method sueldoNeto() { 
+		
+		return categoria.neto() 
+	}
+	
 	method sueldo() {
-		return self.sueldoNeto() 
+		
+		return self.sueldoNeto() + bonoResultado.monto(self) + bonoPresentismo.monto(self)
 			/* + el bono por presentismo */
 			/* + el bono por resultado */
 		
