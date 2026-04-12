@@ -20,3 +20,21 @@ object cadete {
 	}
 
 }
+
+//object para la categoria vendedor
+
+object vendedor {
+  
+	
+	method neto() {
+	  
+		return 16000
+
+	}
+
+	method activarAumentoPorMuchasVentas() {
+
+		if(cantidadDeVentas)
+
+	}
+}
